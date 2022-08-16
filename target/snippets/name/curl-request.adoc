@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/membername?name=%ED%99%8D%EA%B8%B8%EB%8F%99' -i -X GET
+----

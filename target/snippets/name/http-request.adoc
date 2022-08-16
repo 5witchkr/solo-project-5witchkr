@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /membername?name=%ED%99%8D%EA%B8%B8%EB%8F%99 HTTP/1.1
+Host: localhost:8080
+
+----
