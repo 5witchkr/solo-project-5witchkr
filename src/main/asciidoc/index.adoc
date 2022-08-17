@@ -4,16 +4,16 @@
 모든회원조회
 
 .curl-request
-include::{snippets}/all/curl-request.adoc[]
+include::{snippets}/member/curl-request.adoc[]
 
 .http-request
-include::{snippets}/all/http-request.adoc[]
+include::{snippets}/member/http-request.adoc[]
 
 .http-response
-include::{snippets}/all/http-response.adoc[]
+include::{snippets}/member/http-response.adoc[]
 
 .response-body
-include::{snippets}/all/response-body.adoc[]
+include::{snippets}/member/response-body.adoc[]
 
 특정회원검색
 

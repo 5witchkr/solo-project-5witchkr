@@ -450,13 +450,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="title">curl-request</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/all' -i -X GET</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/all?page=1' -i -X GET</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">http-request</div>
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /all HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /all?page=1 HTTP/1.1
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -464,16 +464,16 @@ Host: localhost:8080</code></pre>
 <div class="title">http-response</div>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
-Content-Type: text/plain;charset=UTF-8
-Content-Length: 2
+Content-Type: application/json
+Content-Length: 317
 
-hi</code></pre>
+{"content":[],"pageable":{"sort":{"sorted":false,"unsorted":true,"empty":true},"pageSize":20,"pageNumber":1,"offset":20,"unpaged":false,"paged":true},"last":true,"totalPages":0,"totalElements":0,"first":false,"numberOfElements":0,"size":20,"number":1,"sort":{"sorted":false,"unsorted":true,"empty":true},"empty":true}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">response-body</div>
 <div class="content">
-<pre class="highlight nowrap"><code>hi</code></pre>
+<pre class="highlight nowrap"><code>{"content":[],"pageable":{"sort":{"sorted":false,"unsorted":true,"empty":true},"pageSize":20,"pageNumber":1,"offset":20,"unpaged":false,"paged":true},"last":true,"totalPages":0,"totalElements":0,"first":false,"numberOfElements":0,"size":20,"number":1,"sort":{"sorted":false,"unsorted":true,"empty":true},"empty":true}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -512,7 +512,7 @@ Content-Length: 9
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2022-08-16 22:19:04 +0900
+Last updated 2022-08-17 12:41:18 +0900
 </div>
 </div>
 </body>
