@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 
@@ -25,10 +26,11 @@ public class SoloTest {
 
     @Test
     public void ReturnHi() throws Exception {
-        this.mockMvc.perform(get("/all"))
+
+        this.mockMvc.perform(get("/all").param("page", "1"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("hi")))
+                .andExpect(content().string(containsString("all")))
                 .andDo(document("all"));
     }
 
